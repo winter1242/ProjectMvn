@@ -1,6 +1,8 @@
 package org.example;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
@@ -29,7 +31,19 @@ public class Ejercicio2 {
         return arrayAleatorio;
     }
 
-    public static void valorUnico(double[] array) {
-      
+    public static Double[] valorUnico(double[] array) {
+        Set<Double> elementUnic = new HashSet<>();
+
+        for (Double elemento : array) {
+            elementUnic.add(elemento);
+        }
+
+        Double[] resultado = new Double[elementUnic.size()];
+        int indice = 0;
+        for (Double elemento : elementUnic) {
+            resultado[indice++] = elemento;
+        }
+
+        return resultado;
     }
 }
