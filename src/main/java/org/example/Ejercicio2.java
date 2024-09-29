@@ -2,11 +2,11 @@ package org.example;
 
 import java.util.Random;
 
-public class Ejercicio1 {
+public class Ejercicio2 {
     public static void main(String[] args) {
         double[] miArray = generator();
-        
-        dividirEntreMil(miArray);
+
+        valorUnico(miArray);
 
 
         for (double valor : miArray) {
@@ -29,9 +29,7 @@ public class Ejercicio1 {
         return arrayAleatorio;
     }
 
-    public static void dividirEntreMil(double[] array) {
-        for (int i = 0; i < array.length; i++) {
-            array[i] /= 1000;
-        }
+    public static void valorUnico(double[] array) {
+      
     }
 }
