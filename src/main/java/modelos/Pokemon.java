@@ -34,6 +34,11 @@ public class Pokemon {
         return esMacho;
     }
 
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
     public String getTipo() {
         return tipo;
     }
