@@ -38,6 +38,26 @@ public class Usuario {
         return nombre;
     }
 
+    public String getCorreo() {
+        return correo;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
     @Override
     public String toString() {
         final var multilinea = """
