@@ -20,7 +20,7 @@ public class Ejercicio1 {
         final var listFiltrada = new ArrayList<Usuario>();
 
         for (var usuario : listaUsuarios) {
-            if (usuario.getPeso() > 50 && usuario.getNombre().startsWith("R")) {
+            if (usuario.getPeso() > 50 && usuario.getNombre().startsWith("R") && usuario.getApellido().endsWith("O")) {
                 listFiltrada.add(usuario);
             }
         }
