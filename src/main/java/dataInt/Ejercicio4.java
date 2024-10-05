@@ -1,4 +1,4 @@
-package org.example;
+package dataInt;
 
 import java.util.Random;
 

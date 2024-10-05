@@ -1,4 +1,4 @@
-package org.example;
+package dataInt;
 
 import java.util.Random;
 
@@ -32,5 +32,5 @@ public class Ejercicio3 {
 
         return suma;
     }
-    
+
 }

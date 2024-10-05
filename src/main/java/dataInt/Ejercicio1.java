@@ -1,4 +1,4 @@
-package org.example;
+package dataInt;
 
 import java.util.Random;
 
@@ -22,7 +22,7 @@ public class Ejercicio1 {
         for (int i = 0; i < miArray.length; i++) {
             miArray[i] = random.nextInt(1000) + 1;
         }
-        
+
         return miArray;
     }
 
