@@ -1,7 +1,7 @@
-package principal;
+package usuarios.principal;
 
-import modelos.Usuario;
-import reader.ExcelReader;
+import usuarios.modelos.Usuario;
+import usuarios.reader.ExcelReader;
 
 import java.util.ArrayList;
 import java.util.List;

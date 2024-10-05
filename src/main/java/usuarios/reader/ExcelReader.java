@@ -1,7 +1,7 @@
-package reader;
+package usuarios.reader;
 
 import com.poiji.bind.Poiji;
-import modelos.Usuario;
+import usuarios.modelos.Usuario;
 
 import java.io.File;
 import java.util.List;
