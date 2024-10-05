@@ -1,7 +1,7 @@
-package Ejercicios;
+package pokemones.Ejercicios;
 
-import modelos.Pokemon;
-import reader.JsonReader;
+import pokemones.modelos.Pokemon;
+import pokemones.reader.JsonReader;
 
 import java.util.List;
 

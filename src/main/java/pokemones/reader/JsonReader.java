@@ -1,8 +1,8 @@
-package reader;
+package pokemones.reader;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
-import modelos.Pokemon;
+import pokemones.modelos.Pokemon;
 
 import java.io.File;
 import java.io.IOException;

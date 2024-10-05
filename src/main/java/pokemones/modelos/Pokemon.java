@@ -1,4 +1,4 @@
-package modelos;
+package pokemones.modelos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
