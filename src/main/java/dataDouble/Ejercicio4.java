@@ -1,14 +1,18 @@
-package org.example;
+package dataDouble;
 
 import java.util.Random;
 
-public class Ejercicio3 {
+public class Ejercicio4 {
+
     public static void main(String[] args) {
         double[] miArray = generator();
 
-        System.out.println("La suma es " + suma(miArray));
+        ordenarArray(miArray);
 
 
+        for (double valor : miArray) {
+            System.out.println(valor + "     ");
+        }
     }
 
     public static double[] generator() {
@@ -29,14 +33,19 @@ public class Ejercicio3 {
         return arrayAleatorio;
     }
 
-    public static double suma(double[] array) {
-        double sumav = 0;
-        for (double elemento : array) {
-            sumav += elemento;
+
+    public static void ordenarArray(double[] arr) {
+        //Comentario de prueba
+        int n = arr.length;
+        double tempo = 0;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    tempo = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tempo;
+                }
+            }
         }
-
-
-        return sumav;
     }
-
 }

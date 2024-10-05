@@ -1,4 +1,4 @@
-package org.example;
+package dataDouble;
 
 import java.util.HashSet;
 import java.util.Random;

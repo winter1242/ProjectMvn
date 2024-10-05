@@ -1,11 +1,11 @@
-package org.example;
+package dataDouble;
 
 import java.util.Random;
 
 public class Ejercicio1 {
     public static void main(String[] args) {
         double[] miArray = generator();
-        
+
         dividirEntreMil(miArray);
 
 
