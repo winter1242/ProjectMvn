@@ -1,10 +1,8 @@
 package dataInt;
 
-import java.util.Random;
-
 public class Ejercicio4 {
     public static void main(String[] args) {
-        int[] miArray = generator();
+        final var miArray = RandomUtilities.generator(1, 1000, 500);
 
         ordenarArray(miArray);
 
@@ -14,20 +12,10 @@ public class Ejercicio4 {
 
     }
 
-    public static int[] generator() {
-        int[] miArray = new int[500];
-        Random random = new Random();
-
-        for (int i = 0; i < miArray.length; i++) {
-            miArray[i] = random.nextInt(1000) + 1;
-        }
-
-        return miArray;
-    }
-
     public static void ordenarArray(int[] arr) {
-        int n = arr.length;
-        int tempo = 0;
+        var n = arr.length;
+        var tempo = 0;
+
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {

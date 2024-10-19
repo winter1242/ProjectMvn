@@ -1,35 +1,20 @@
 package dataInt;
 
 import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
 
 public class Ejercicio2 {
 
 
     public static void main(String[] args) {
-        int[] miArray = generator();
-
+        final var miArray = RandomUtilities.generator(1, 1000, 500);
 
         for (int valor : obtenerElementosUnicos(miArray)) {
             System.out.print(valor + " ");
         }
-
-    }
-
-    public static int[] generator() {
-        int[] miArray = new int[500];
-        Random random = new Random();
-
-        for (int i = 0; i < miArray.length; i++) {
-            miArray[i] = random.nextInt(1000) + 1;
-        }
-
-        return miArray;
     }
 
     public static int[] obtenerElementosUnicos(int[] array) {
-        Set<Integer> elementUnic = new HashSet<>();
+        var elementUnic = new HashSet<Integer>();
 
         for (int elemento : array) {
             elementUnic.add(elemento);
@@ -37,7 +22,8 @@ public class Ejercicio2 {
 
         int[] resultado = new int[elementUnic.size()];
         int indice = 0;
-        for (int elemento : elementUnic) {
+        
+        for (var elemento : elementUnic) {
             resultado[indice++] = elemento;
         }
 
