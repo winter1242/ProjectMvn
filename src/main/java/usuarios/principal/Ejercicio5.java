@@ -3,7 +3,9 @@ package usuarios.principal;
 import usuarios.modelos.Usuario;
 import usuarios.reader.ExcelReader;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Ejercicio5 {
     public static void main(String args[]) {
@@ -15,11 +17,11 @@ public class Ejercicio5 {
 
     private static String sumaEdades(List<Usuario> listUsuario, String ID1, String ID2) {
         var suma = 0;
+        Map<String, Integer> usuariosMap = new HashMap<>();
         for (var usuario : listUsuario) {
-            if (usuario.getId().equals(ID1) || usuario.getId().equals(ID2)) {
-                suma += usuario.getEdad();
-            }
+            usuariosMap.put(usuario.getId(), usuario.getEdad());
         }
+        suma = usuariosMap.get(ID1) + usuariosMap.get(ID2);
         return suma + "";
     }
 }
