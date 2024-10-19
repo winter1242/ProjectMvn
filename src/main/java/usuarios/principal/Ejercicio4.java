@@ -3,8 +3,6 @@ package usuarios.principal;
 import usuarios.modelos.Usuario;
 import usuarios.reader.ExcelReader;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class Ejercicio4 {
@@ -13,19 +11,21 @@ public class Ejercicio4 {
         final var listOrdenada = ordenarUsuario(listUsuario);
 
         System.out.printf("La lista de usuarios ordenada es : %s", listOrdenada);
-
-
     }
 
-    private static List<Usuario> ordenarUsuario(List<Usuario> listUsuario) {
+    public static List<Usuario> ordenarUsuario(List<Usuario> listUsuario) {
+        var n = listUsuario.size();
+        Usuario tempo;
 
-        Collections.sort(listUsuario, new Comparator<Usuario>() {
-            @Override
-            public int compare(Usuario o1, Usuario o2) {
-                return o2.getApellido().compareTo(o1.getApellido());
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (listUsuario.get(j).getApellido().compareTo(listUsuario.get(j + 1).getApellido()) < 0) {
+                    tempo = listUsuario.get(j);
+                    listUsuario.set(j, listUsuario.get(j + 1));
+                    listUsuario.set(j + 1, tempo);
+                }
             }
-        });
-
+        }
         return listUsuario;
     }
 }

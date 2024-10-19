@@ -12,14 +12,13 @@ public class Ejercicio3 {
         final var listFiltrada = listChina(listUsuario);
 
         System.out.printf("La lista de Usuario es : %s", listFiltrada);
-
     }
 
     public static List<Usuario> listChina(List<Usuario> listUsuario) {
         final var listFiltrada = new ArrayList<Usuario>();
 
         for (var usuario : listUsuario) {
-            if (usuario.getPais() == "CHINA") {
+            if (usuario.getPais().equals("CHINA")) {
                 listFiltrada.add(usuario);
             }
         }

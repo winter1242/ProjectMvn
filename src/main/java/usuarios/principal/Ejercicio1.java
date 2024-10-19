@@ -13,7 +13,6 @@ public class Ejercicio1 {
         final var listafiltrada = filtrarUsuarios(listatotal);
 
         System.out.printf("La lista de Usuarios es :%s", listafiltrada);
-
     }
 
     private static List<Usuario> filtrarUsuarios(List<Usuario> listaUsuarios) {
@@ -25,8 +24,5 @@ public class Ejercicio1 {
             }
         }
         return listFiltrada;
-
     }
-
-
 }
