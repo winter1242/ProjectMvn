@@ -12,7 +12,8 @@ public class Ejercicio2 {
     public static void main(String args[]) {
         final var listPokemon = JsonReader.leerPokemonJson();
         final var listFiltrada = filtrarPokemon(listPokemon);
-        System.out.printf("La lista es : %s", listFiltrada);
+        final var listOrdenada = ordenarPokemon(listFiltrada);
+        System.out.printf("La lista es : %s", listOrdenada);
     }
 
     private static List<Pokemon> filtrarPokemon(List<Pokemon> listPokemon) {
@@ -29,5 +30,11 @@ public class Ejercicio2 {
             }
         });
         return listFiltrada;
+    }
+
+    private static List<Pokemon> ordenarPokemon(List<Pokemon> listPokemon) {
+        final var listOrdenada = new ArrayList<Pokemon>();
+
+        return listOrdenada;
     }
 }
