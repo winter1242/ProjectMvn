@@ -10,8 +10,7 @@ public class Ejercicio5 {
         final var listUsuario = ExcelReader.obtenerListaUsuarios();
         final var ID1 = "USR-124";
         final var ID2 = "USR-88";
-        System.out.print("La suma de " + ID1 + " y " + ID2 + " : " + sumaEdades(listUsuario, ID1, ID2));
-
+        System.out.printf("La suma es : %s", sumaEdades(listUsuario, ID1, ID2));
     }
 
     private static String sumaEdades(List<Usuario> listUsuario, String ID1, String ID2) {
