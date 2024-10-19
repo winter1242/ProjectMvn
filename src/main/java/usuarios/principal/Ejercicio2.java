@@ -23,7 +23,6 @@ public class Ejercicio2 {
             }
         }
 
-
         return listGmail;
     }
 }

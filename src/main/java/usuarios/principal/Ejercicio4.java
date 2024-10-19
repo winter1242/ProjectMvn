@@ -13,8 +13,6 @@ public class Ejercicio4 {
         final var listOrdenada = ordenarUsuario(listUsuario);
 
         System.out.printf("La lista de usuarios ordenada es : %s", listOrdenada);
-
-
     }
 
     private static List<Usuario> ordenarUsuario(List<Usuario> listUsuario) {
