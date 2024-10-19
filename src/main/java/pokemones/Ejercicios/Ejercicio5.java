@@ -11,7 +11,6 @@ public class Ejercicio5 {
         final var id1 = "PKM-10";
         final var id2 = "PKM-6";
         System.out.printf("La suma es : %.2f", sumaPokemon(listPokemon, id1, id2));
-
     }
 
     private static Double sumaPokemon(List<Pokemon> listPokemon, String id1, String id2) {
@@ -21,7 +20,6 @@ public class Ejercicio5 {
                 suma += pokemon.getDefensa();
             }
         }
-
         return suma;
     }
 }

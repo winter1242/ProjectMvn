@@ -4,8 +4,6 @@ import pokemones.modelos.Pokemon;
 import pokemones.reader.JsonReader;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class Ejercicio2 {
@@ -23,18 +21,22 @@ public class Ejercicio2 {
                 listFiltrada.add(pokemon);
             }
         }
-        Collections.sort(listFiltrada, new Comparator<Pokemon>() {
-            @Override
-            public int compare(Pokemon o1, Pokemon o2) {
-                return Double.compare(o2.getNivel(), o1.getNivel());
-            }
-        });
         return listFiltrada;
     }
 
     private static List<Pokemon> ordenarPokemon(List<Pokemon> listPokemon) {
-        final var listOrdenada = new ArrayList<Pokemon>();
+        var n = listPokemon.size();
+        Pokemon tempo;
 
-        return listOrdenada;
+        for (var i = 0; i < n - 1; i++) {
+            for (var j = 0; j < n - i - 1; j++) {
+                if (listPokemon.get(j).getNivel() < listPokemon.get(j + 1).getNivel()) {
+                    tempo = listPokemon.get(j);
+                    listPokemon.set(j, listPokemon.get(j + 1));
+                    listPokemon.set(j + 1, tempo);
+                }
+            }
+        }
+        return listPokemon;
     }
 }

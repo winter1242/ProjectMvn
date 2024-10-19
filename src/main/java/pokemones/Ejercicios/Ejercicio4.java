@@ -10,14 +10,11 @@ public class Ejercicio4 {
         final var listPokemon = JsonReader.leerPokemonJson();
         aumentoNivel(listPokemon);
         System.out.printf("La lista es :%s", listPokemon);
-
     }
 
     private static void aumentoNivel(List<Pokemon> listPokemon) {
-
-        for (int i = 0; i < listPokemon.size(); i++) {
+        for (var i = 0; i < listPokemon.size(); i++) {
             listPokemon.get(i).setHp(listPokemon.get(i).getHp() + 500);
         }
-
     }
 }
