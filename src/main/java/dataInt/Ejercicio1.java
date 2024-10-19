@@ -3,7 +3,7 @@ package dataInt;
 public class Ejercicio1 {
 
     public static void main(String[] args) {
-        int[] miArray = RandomUtilities.generator(1, 1000, 500);
+        final var miArray = RandomUtilities.generator(1, 1000, 500);
 
         multiplicarPorDos(miArray);
 
